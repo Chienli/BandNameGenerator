@@ -8,8 +8,11 @@
             {
                 return $"The {str[0].ToString().ToUpper() + str.Substring(1, str.Length - 1)}";
             }
-
-            return "";
+            else
+            {
+                return
+                    $"{str[0].ToString().ToUpper() + str.Substring(1, str.Length - 1) + str.Substring(1, str.Length - 1)}";
+            }
         }
     }
 }

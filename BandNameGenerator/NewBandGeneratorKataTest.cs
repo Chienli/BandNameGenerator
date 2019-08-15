@@ -15,5 +15,13 @@ namespace BandNameGenerator
 
             Assert.AreEqual("The Soul", actual);
         }
+
+        [TestMethod]
+        public void Same_first_end_return_Band_repeat_without_first()
+        {
+            var actual = _kata.GetNewBandName("tart");
+
+            Assert.AreEqual("Tartart", actual);
+        }
     }
 }
