@@ -4,7 +4,12 @@
     {
         public string GetNewBandName(string str)
         {
-            return str[0] != str[str.Length - 1] ? $"The {TheFirstLetterToUpper(str) + GetTheStringWithoutFirstLetter(str)}" : $"{TheFirstLetterToUpper(str) + GetTheStringWithoutFirstLetter(str) + GetTheStringWithoutFirstLetter(str)}";
+            return IsDiffFirstEndLetter(str) ? $"The {TheFirstLetterToUpper(str) + GetTheStringWithoutFirstLetter(str)}" : $"{TheFirstLetterToUpper(str) + GetTheStringWithoutFirstLetter(str) + GetTheStringWithoutFirstLetter(str)}";
+        }
+
+        private static bool IsDiffFirstEndLetter(string str)
+        {
+            return str[0] != str[str.Length - 1];
         }
 
         private static string GetTheStringWithoutFirstLetter(string str)
